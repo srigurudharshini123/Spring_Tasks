@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       
+       <bean id="lib1" class="bean.Library">
+       <property name="books">
+       <list>
+           <value>The Alchemist</value>
+           <value>Wings of fire</value>
+           <value>Pride and prejudice</value>
+           <value>Harry Potter</value>
+       </list>    
+       </property>   
+    
+      
+   
+      <property name="author">
+      <map>
+      <entry key="The Alchemist" value="Paulo Coelho"/>
+      <entry key="Wings of fire" value="A.P.J Abdul Kalam"/>
+      <entry key="Pride and prejudice" value="Jane Austen"/>
+      <entry key="Harry Potter" value="J.K"/>    
+      </map>
+      </property>
+      </bean> 
+       
+       
+       
+       
+       
+       
+       </beans>
