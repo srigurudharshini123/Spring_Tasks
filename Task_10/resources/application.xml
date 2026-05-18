@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="account1"
+		  class="bean.Account"
+		  scope="singleton"
+		  init-method="start"
+		  destroy-method="end">
+
+		<constructor-arg value="101"/>
+		<constructor-arg value="Gurudharshini"/>
+		<constructor-arg value="50000.90"/>
+
+	</bean>
+
+	<!-- TransactionService Bean -->
+	<bean id="transaction1"
+		  class="bean.Transaction"
+		  scope="singleton"
+		  init-method="start"
+		  destroy-method="end">
+
+		<constructor-arg ref="account1"/>
+
+	</bean>
+
+	<bean id="bank1"
+		  class="bean.Bank"
+		  autowire="byType"
+		  scope="singleton"
+		  init-method="init"
+		  destroy-method="destroy"/>
+
+</beans>
