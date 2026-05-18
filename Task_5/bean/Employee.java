@@ -1,0 +1,42 @@
+package bean;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Employee {
+private int id;
+private String name;
+private double salary;
+@Autowired
+private Address addr;
+
+public Address getAddr() {
+	return addr;
+}
+public void setAddr(Address addr) {
+	this.addr = addr;
+}
+public int getId() {
+	return id;
+}
+public void setId(int id) {
+	this.id = id;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public double getSalary() {
+	return salary;
+}
+public void setSalary(double salary) {
+	this.salary = salary;
+}
+public void display() {
+	System.out.println("Employee ID: "+id);
+	System.out.println("Employee Name: "+name);
+	System.out.println("Salary: "+salary);
+	System.out.println(addr);
+}
+}
