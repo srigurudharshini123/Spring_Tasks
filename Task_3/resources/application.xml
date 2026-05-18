@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       
+       <bean id="lap1" class="bean.Laptop">
+       <constructor-arg name="brand" value="Lenovo"/>
+       <constructor-arg name="price" value="300000"/>
+        <constructor-arg name="storage" value="Available"/>
+        <constructor-arg name="pro" ref="pro1"/>
+        
+       </bean>
+       
+       <bean id="pro1" class="bean.Processor">
+        <constructor-arg name="id" value="112"/>
+         <constructor-arg name="gb" value="500GB"/>
+         <constructor-arg name="process" value="Working"/>       
+       </bean>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       </beans>
